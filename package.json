@@ -1,0 +1,9 @@
+{
+  "name": "multiomics-fusion-bc",
+  "version": "1.0.0",
+  "description": "Manuscript build scripts for the multi-omics breast cancer fusion paper",
+  "private": true,
+  "dependencies": {
+    "docx": "^8.5.0"
+  }
+}

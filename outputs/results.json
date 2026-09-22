@@ -1,0 +1,216 @@
+{
+  "n_patients": 520,
+  "subtype_prevalence": {
+    "LumA": 207,
+    "Basal": 121,
+    "LumB": 104,
+    "HER2E": 88
+  },
+  "recurrence_rate_overall": 0.34615384615384615,
+  "recurrence_rate_by_subtype": {
+    "Basal": 0.768595041322314,
+    "HER2E": 0.3977272727272727,
+    "LumA": 0.12077294685990338,
+    "LumB": 0.25961538461538464
+  },
+  "subtype_benchmark": {
+    "PAM50_expression_only": {
+      "mean": 0.9994850965907014,
+      "sd": 0.0005916452734522123,
+      "n": 40
+    },
+    "genomics_only": {
+      "mean": 0.8227578758599389,
+      "sd": 0.02025334484268028,
+      "n": 40
+    },
+    "transcriptomics_only": {
+      "mean": 0.9998870569150453,
+      "sd": 0.00020539737854200686,
+      "n": 40
+    },
+    "proteomics_only": {
+      "mean": 0.9195964969341783,
+      "sd": 0.011912844641111883,
+      "n": 40
+    },
+    "methylation_only": {
+      "mean": 0.9885739833128102,
+      "sd": 0.006425936900518822,
+      "n": 40
+    },
+    "naive_concatenation": {
+      "mean": 0.9993253596981262,
+      "sd": 0.000704853544236904,
+      "n": 40
+    },
+    "deep_multiomics_fusion": {
+      "mean": 0.9922022710689037,
+      "sd": 0.00639141185931276,
+      "n": 40
+    }
+  },
+  "subtype_confusion_matrix_fusion_fold0": [
+    [
+      204,
+      3,
+      0,
+      0
+    ],
+    [
+      15,
+      87,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      88,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      121
+    ]
+  ],
+  "subtype_classes_order": [
+    "LumA",
+    "LumB",
+    "HER2E",
+    "Basal"
+  ],
+  "recurrence_benchmark": {
+    "PAM50_subtype_plus_clinical": {
+      "mean": 0.8043607026143791,
+      "sd": 0.04522682296196794,
+      "n": 40
+    },
+    "deep_multiomics_fusion_plus_clinical": {
+      "mean": 0.8010825163398693,
+      "sd": 0.046778579260962856,
+      "n": 40
+    }
+  },
+  "recurrence_paired_comparison": {
+    "n_paired_folds": 40,
+    "mean_delta_AUC_fusion_minus_pam50": -0.0032781862745098005,
+    "sd_delta": 0.038148158786082395,
+    "pct_folds_fusion_better": 0.4,
+    "paired_ttest_stat": -0.5366515023042137,
+    "paired_ttest_pval": 0.5945567021579722,
+    "wilcoxon_stat": 332.5,
+    "wilcoxon_pval": 0.42230315845978883
+  },
+  "signature_16": [
+    {
+      "feature": "XBP1",
+      "mean_importance": 0.0840513261860858,
+      "bootstrap_stability": 1.0
+    },
+    {
+      "feature": "MIA",
+      "mean_importance": 0.05294193807750976,
+      "bootstrap_stability": 1.0
+    },
+    {
+      "feature": "ESR1_prom",
+      "mean_importance": 0.04637416374926678,
+      "bootstrap_stability": 1.0
+    },
+    {
+      "feature": "BRCA1_prom",
+      "mean_importance": 0.0369234793341957,
+      "bootstrap_stability": 1.0
+    },
+    {
+      "feature": "AURKA",
+      "mean_importance": 0.034135291069077874,
+      "bootstrap_stability": 0.9875
+    },
+    {
+      "feature": "ESR1",
+      "mean_importance": 0.02669368934803526,
+      "bootstrap_stability": 0.9875
+    },
+    {
+      "feature": "BCL2",
+      "mean_importance": 0.02620961030579986,
+      "bootstrap_stability": 0.95
+    },
+    {
+      "feature": "KRT5",
+      "mean_importance": 0.02566642204123387,
+      "bootstrap_stability": 0.9375
+    },
+    {
+      "feature": "ERBB2",
+      "mean_importance": 0.024932335042507546,
+      "bootstrap_stability": 0.95
+    },
+    {
+      "feature": "MELK",
+      "mean_importance": 0.024687749068725028,
+      "bootstrap_stability": 0.95
+    },
+    {
+      "feature": "CCNE1",
+      "mean_importance": 0.024628603818786864,
+      "bootstrap_stability": 0.95
+    },
+    {
+      "feature": "PWY33",
+      "mean_importance": 0.024523523833786105,
+      "bootstrap_stability": 0.95
+    },
+    {
+      "feature": "PWY9",
+      "mean_importance": 0.0231969210216696,
+      "bootstrap_stability": 0.8125
+    },
+    {
+      "feature": "PWY14",
+      "mean_importance": 0.02231028586928262,
+      "bootstrap_stability": 0.9125
+    },
+    {
+      "feature": "MYC",
+      "mean_importance": 0.02148062083729706,
+      "bootstrap_stability": 0.7625
+    },
+    {
+      "feature": "PWY40",
+      "mean_importance": 0.019964967030325458,
+      "bootstrap_stability": 0.725
+    }
+  ],
+  "signature_16_meta": {
+    "n_candidate_features_tested": 187,
+    "stability_threshold": 0.7,
+    "n_features_above_threshold": 16
+  },
+  "signature_biology_checks": [
+    {
+      "feature": "BRCA1_prom",
+      "annotation": "BRCA1/basal-like epigenetics",
+      "corr_with_proliferation_latent": 0.698
+    },
+    {
+      "feature": "AURKA",
+      "annotation": "proliferation biology",
+      "corr_with_proliferation_latent": 0.853
+    },
+    {
+      "feature": "ESR1",
+      "annotation": "ER/luminal biology",
+      "corr_with_proliferation_latent": -0.715
+    },
+    {
+      "feature": "ERBB2",
+      "annotation": "HER2 amplicon biology",
+      "corr_with_proliferation_latent": 0.554
+    }
+  ]
+}
