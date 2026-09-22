@@ -1,4 +1,4 @@
-# Deep Multi-Omics Fusion for Breast Cancer Molecular Subtyping and Recurrence Risk Prediction
+# Deep Multi-Branch Fusion of Genomic, Transcriptomic, Proteomic and Methylation Data for Breast Cancer Subtyping and Recurrence Risk Prediction: A Schema-Matched Synthetic Benchmark
 
 Code and synthetic data accompanying:
 
